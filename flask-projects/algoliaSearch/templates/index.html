@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <h1>Notes</h1>
+    <p>Search topic</p>
+
+    <form hx-post="/data" hx-target="#results" hx-trigger="keyup">
+        <input type="text" id="name" placeholder="search" name="q" hx-indicator="#loading" />
+        <button type="submit" hx-disable hx-get="?" hx-swap="none">Search</button>
+    </form>
+
+    <div id="loading" style="display: none;">Loading...</div>
+    <div id="results"></div>
+
+{% endblock %}
+

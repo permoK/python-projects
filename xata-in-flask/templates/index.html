@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block title %}Home - xata{% endblock %}
+
+{% block content %}
+<h2>Welcome {{name}}, 😁</h2>
+<form>
+	<input type="text" id="name" placeholder="search" name="name" hx-post="/data" hx-target="#results" hx-trigger="keyup" />
+</form>
+	<div id="results"></div>
+{% endblock %}
+

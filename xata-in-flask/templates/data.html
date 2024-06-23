@@ -1,0 +1,14 @@
+
+
+<div class="container" style=" color: black; ">
+	{% for item in records %}
+	{% for cl in items %}
+	{% if cl['id'] == item.color %}
+	<div class="row" style="background-color: {{ cl['color'] }} ; width: 25%; margin: 2px; padding: 2px; color: white;">
+		<p> {{ item.names }}</p>
+		<p> {{ item.Description }}</p>
+	</div>
+	{% endif %}
+	{% endfor %}
+	{% endfor %}
+</div>

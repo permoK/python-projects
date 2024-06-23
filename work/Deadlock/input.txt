@@ -1,0 +1,15 @@
+A ← R;
+B ← S;
+C ← T;
+D ← U;
+E ← V;
+F ← W;
+G ← U;
+A → S;
+B → T;
+C → U;
+D → V;
+E → W;
+F → U;
+G → R;
+

@@ -1,0 +1,30 @@
+<!-- templates/index.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flask Chat</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js" integrity="sha384-lUDZjpoAazycrZkD44TP3FW+vtPHI6ZtGBS2ogZUCa4yMO5xq5Zl9rSdZX4y68wC" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha384-KyZXEAg3QhqLMpG8r+Knujsl5+z50K7Oe/5W+9xuQszB1/yZQV7L3FgRVNH3IyQ+" crossorigin="anonymous"></script>
+</head>
+<body>
+    <ul id="messages"></ul>
+    <input id="m" autocomplete="off" /><button>Send</button>
+    <script>
+        var socket = io.connect('http://' + document.domain + ':' + location.port);
+
+        socket.on('message', function(msg) {
+            $('#messages').append($('<li>').text(msg));
+        });
+
+        $('form').submit(function() {
+            socket.emit('message', $('#m').val());
+            $('#m').val('');
+            return false;
+        });
+    </script>
+</body>
+</html>
+

@@ -1,0 +1,24 @@
+<!-- HTML -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>htmx Example</title>
+    <script src="https://unpkg.com/htmx.org/dist/htmx.js"></script>
+</head>
+<body>
+
+<!-- Display the number -->
+<p>Number: <span id="numberDisplay"></span></p>
+
+<!-- Button to update the number -->
+<button hx-get="/update_number" hx-trigger="click" hx-target="#numberDisplay">Update Number</button>
+
+<script>
+    // JavaScript (optional): You can include JavaScript logic to handle more complex interactions or to enhance user experience.
+</script>
+
+</body>
+</html>
+
