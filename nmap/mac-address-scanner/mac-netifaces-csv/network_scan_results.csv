@@ -1,0 +1,5 @@
+IP,MAC,Hostname,OS,Device Type
+192.168.0.1,44:32:c8:b5:4b:c1,,Motorola SURFboard 5101 cable modem,broadband router
+192.168.0.26,da:bd:c6:e8:37:9e,,Unknown,Unknown
+192.168.0.28,20:34:fb:a9:cd:59,,Unknown,Unknown
+192.168.0.10,00:10:95:de:ad:07,,Linux 2.6.9 - 2.6.30,general purpose
